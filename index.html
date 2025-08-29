@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu-Gi-Oh! Duelo Simplificado</title>
+
+    <link rel="stylesheet" href="src/styles/buttons.css">
+    <link rel="stylesheet" href="src/styles/containers_and_frames.css">
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/reset.css">
+</head>
+<body>
+    <audio id="bgm" loop>
+        <source src="src/assets/audios/egyptian_duel.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <video autoplay muted loop id="video-background">
+        <source src="src/assets/video/yugi.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+    </video>
+    <div id="video-overlay"></div> 
+    
+    <div class="left-panel framed-golden">
+        <div class="scoreboard">
+            <span>Win: 0 | Lose: 2</span>
+        </div>
+        <div style="position: relative;">
+            <div class="selected-card-container">
+                <div class="selected-card-image">
+                    <img id="player-card-image" src="" alt="Carta do Jogador">
+                </div>
+                <div class="selected-card-text">
+                    <span id="player-card-text"></span>
+                </div>
+                <div class="carta">a 
+                    a 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-panel">
+        <div class="hand-container framed" id="opponent-hand">
+            </div>
+        
+        <div class="field-area">
+            <div class="card-slot" id="player-card-slot"></div>
+            <div class="central-icon">
+                <img src="src/assets/icons/millenium2.png" alt="Olho do Milênio">
+            </div>
+            <div class="card-slot" id="opponent-card-slot"></div>
+        </div>
+
+        <div class="hand-container framed" id="player-hand" id="opponent-hand">
+            </div>
+    </div>
+
+    <script src="src/scripts/engine.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+body {
+            /* Adicionado um flexbox no body para manter o left-panel no lugar */
+            display: flex;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        #video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -101; /* Z-index menor para ficar atrás do overlay */
+            background-size: cover;
+        }
+
+        #video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
+            z-index: -100;
+        }
+
+        .left-panel {
+      display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center;     /* Centraliza os itens horizontalmente */
+    
+    width: 35%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+        }
+
+        .scoreboard {
+            /* Seus estilos originais para o placar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 50px;
+            padding: 20px 40px;
+            background-color: rgba(255, 254, 254, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+.carta{
+     display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 5rem;
+            padding: 20px 40px;
+            background-color: rgba(255, 254, 254, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5rem;
+}
+
+.hand-container {
+            display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    /* Esta linha é a principal mudança */
+    width: 65vw; 
+    
+    height: 120px;
+    background-color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+        }
+        
+        .card {
+            width: 70px; /* Largura individual de cada carta */
+            height: 100px; /* Altura de cada carta */
+        }
+        
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Garante que a imagem se encaixe sem distorção */
+        }
+
+.field-area {
+            display: flex;
+            justify-content: space-between; /* Distribui os itens nas extremidades e no centro */
+            align-items: center;
+            
+            width: 450px; /* Largura do contêiner principal */
+            background-color: transparent;
+        }
+
+        .card-slot {
+            width: 120px;
+            height: 180px;
+            background-color: transparent;
+            border: 3px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .central-icon img {
+            width: 70px; /* Tamanho da imagem do Olho do Milênio */
+            height: auto;
+        }
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    
+    /* Esta propriedade cria o espaçamento entre os elementos */
+    justify-content: space-between;
+    
+    /* Esta propriedade centraliza os elementos horizontalmente */
+    align-items: center;
+    
+    /* Adicione estas propriedades para posicionar o painel à direita da tela */
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 65%; /* 100% - 35% do painel esquerdo */
+    
+    /* Outros estilos que você pode querer adicionar */
+    
+    box-sizing: border-box;
+}
